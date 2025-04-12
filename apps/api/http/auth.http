@@ -1,0 +1,26 @@
+###
+@BASE_URL=http://localhost:3000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHNjaG9vbC5jb20iLCJzdWIiOjMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDQ2Njg4OCwiZXhwIjoxNzQ0NTUzMjg4fQ.dHcVYtBr8LO68IAEMiFxDF_yMq2F4IOgcLDyX4tsKfY
+
+###
+POST {{BASE_URL}}/auth/register
+Content-Type: application/json
+
+{
+    "email": "admin@school.com",
+    "password": "admin",
+    "role": "admin"
+}
+
+###
+POST {{BASE_URL}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@school.com",
+    "password": "admin"
+}
+
+###
+POST {{BASE_URL}}/auth/me
+Authorization: Bearer {{token}}
