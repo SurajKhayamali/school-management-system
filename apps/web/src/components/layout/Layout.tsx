@@ -60,14 +60,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     if (user?.role === "admin") {
       items.push(
-        { text: "Users", icon: <PeopleIcon />, path: "/dashboard/users" },
-        { text: "Teachers", icon: <PeopleIcon />, path: "/dashboard/teachers" },
-        { text: "Students", icon: <PeopleIcon />, path: "/dashboard/students" },
-        { text: "Courses", icon: <BookIcon />, path: "/dashboard/courses" },
+        { text: "Users", icon: <PeopleIcon />, path: "/users" },
+        { text: "Teachers", icon: <PeopleIcon />, path: "/teachers" },
+        { text: "Students", icon: <PeopleIcon />, path: "/students" },
+        { text: "Courses", icon: <BookIcon />, path: "/courses" },
         {
           text: "Settings",
           icon: <SettingsIcon />,
-          path: "/dashboard/settings",
+          path: "/settings",
         },
       );
     } else if (user?.role === "teacher") {
@@ -75,26 +75,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {
           text: "My Classes",
           icon: <SchoolIcon />,
-          path: "/dashboard/classes",
+          path: "/classes",
         },
-        { text: "Students", icon: <PeopleIcon />, path: "/dashboard/students" },
+        { text: "Students", icon: <PeopleIcon />, path: "/students" },
       );
     } else if (user?.role === "student") {
       items.push(
-        { text: "My Courses", icon: <BookIcon />, path: "/dashboard/courses" },
-        { text: "Grades", icon: <SchoolIcon />, path: "/dashboard/grades" },
+        { text: "My Courses", icon: <BookIcon />, path: "/courses" },
+        { text: "Grades", icon: <SchoolIcon />, path: "/grades" },
       );
     } else if (user?.role === "parent") {
       items.push(
         {
           text: "My Children",
           icon: <PeopleIcon />,
-          path: "/dashboard/children",
+          path: "/children",
         },
         {
           text: "Performance",
           icon: <SchoolIcon />,
-          path: "/dashboard/performance",
+          path: "/performance",
         },
       );
     }

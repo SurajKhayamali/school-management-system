@@ -29,25 +29,25 @@ const Dashboard: React.FC = () => {
       <Grid container spacing={3} sx={{ mt: 2 }}>
         {user?.role === "admin" && (
           <>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Total Students</Typography>
                 <Typography variant="h4">120</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Total Teachers</Typography>
                 <Typography variant="h4">15</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Total Courses</Typography>
                 <Typography variant="h4">24</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Total Classes</Typography>
                 <Typography variant="h4">36</Typography>
@@ -58,19 +58,19 @@ const Dashboard: React.FC = () => {
 
         {user?.role === "teacher" && (
           <>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">My Classes</Typography>
                 <Typography variant="h4">5</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">My Students</Typography>
                 <Typography variant="h4">87</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Upcoming Tests</Typography>
                 <Typography variant="h4">3</Typography>
@@ -81,19 +81,19 @@ const Dashboard: React.FC = () => {
 
         {user?.role === "student" && (
           <>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">My Courses</Typography>
                 <Typography variant="h4">6</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Assignments Due</Typography>
                 <Typography variant="h4">4</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Upcoming Tests</Typography>
                 <Typography variant="h4">2</Typography>
@@ -104,19 +104,19 @@ const Dashboard: React.FC = () => {
 
         {user?.role === "parent" && (
           <>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">My Children</Typography>
                 <Typography variant="h4">2</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Pending Approvals</Typography>
                 <Typography variant="h4">1</Typography>
               </Item>
             </Grid>
-            <Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <Item>
                 <Typography variant="h6">Messages</Typography>
                 <Typography variant="h4">3</Typography>

@@ -5,7 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { User } from './users/entities/user.entity';
+import { StudentModule } from './student/student.module';
 
 @Module({
   imports: [
@@ -22,12 +22,13 @@ import { User } from './users/entities/user.entity';
         username: configService.get('DB_USERNAME', 'postgres'),
         password: configService.get('DB_PASSWORD', 'postgres'),
         database: configService.get('DB_DATABASE', 'school_management'),
-        entities: [User],
         synchronize: configService.get('NODE_ENV') !== 'production',
+        autoLoadEntities: true,
       }),
     }),
     AuthModule,
     UsersModule,
+    StudentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
